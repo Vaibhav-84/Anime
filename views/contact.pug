@@ -1,0 +1,19 @@
+extends bas.pug
+
+block scripts
+     script(src='../static/index.js')
+block style
+     style
+        include ../static/style.css
+        include ../static/contact.css
+block body
+  
+    form(action="/contact" method='post' class='myForm')
+     input(type="text" class='myInput' name='name' placeholder='name' required)
+     input(type="email" class='myInput' name='email' placeholder='Email')
+     input(type="number" class='myInput' name='number' placeholder='Number')
+     input(type="text" class='myInput' name='Question' placeholder='Question')
+     input.btn(type='submit', value='Submit')
+
+    div.how
+      p.can How can i help you
